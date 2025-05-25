@@ -67,22 +67,32 @@ $aProductos[] = array( "nombre" => "Aire Acondicionado Split Inverter Frio/ Calo
                    <tbody>
                     <?php 
                     $contador = 0;
-                    while ($contador < 3) { ?>
-                        <tr>
-                            <td><?php echo $aProductos [$contador]["nombre"]; ?></td>
-                            <td><?php echo $aProductos [$contador]["marca"]; ?></td>
-                            <td><?php echo $aProductos [$contador]["modelo"]; ?></td>
-                            <td><?php echo $aProductos [$contador]["stock"] > 10 ? "Hay Stock" : ($aProductos[$contador] ["stock"] > 0 && $aProductos [$contador] ["stock"] <= 10? "Poco Stock" : "No hay stock"); ?></td>
-                            <td><?php echo $aProductos [$contador]["precio"]; ?></td>
-                            <td><button class="btn btn-primary">Comprar </button></td>
-                        </tr>
-                   </tbody>
-                   <?php
-                    $contador++;   
-                        } ?>  
+$subtotal = 0;
+while ($contador < 3) {
+    if ($aProductos[$contador]["stock"] > 0) {
+        $subtotal += $aProductos[$contador]["precio"];
+    }
+?>
+<tr>
+    <td><?php echo $aProductos[$contador]["nombre"]; ?></td>
+    <td><?php echo $aProductos[$contador]["marca"]; ?></td>
+    <td><?php echo $aProductos[$contador]["modelo"]; ?></td>
+    <td><?php echo $aProductos[$contador]["stock"] > 10 ? "Hay Stock" : ($aProductos[$contador]["stock"] > 0 ? "Poco Stock" : "No hay stock"); ?></td>
+    <td><?php echo $aProductos[$contador]["precio"]; ?></td>
+    <td><button class="btn btn-primary">Comprar</button></td>
+</tr>
+<?php
+    $contador++;
+}
+?>
                 </table>
             </div>
         </div>
+       <div class="row">
+        <div class="col-12">
+            <h2></h2>
+        </div>
+       </div>
     </main>
 </body>
 
