@@ -23,7 +23,7 @@ $empleados = [
 </head>
 <body class="container mt-5">
     <h2 class="mb-4 text-center">Listado de empleados</h2>
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <thead class="table-dark">
             <tr>
                 <th>DNI</th>
