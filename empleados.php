@@ -9,7 +9,7 @@ function calcularNeto($bruto) {
 $empleados = [
     ["dni" => "33300123", "nombre" => "David García", "sueldo" => 85000],
     ["dni" => "40874456", "nombre" => "Ana Del Valle", "sueldo" => 90000],
-    ["dni" => "67567565", "nombre" => "Andrés Perez", "sueldo" => 100000],
+    ["dni" => "67567565", "nombre" => "Andres Perez", "sueldo" => 100000],
     ["dni" => "75744545", "nombre" => "Victoria Luz", "sueldo" => 70000]
 ];
 ?>
